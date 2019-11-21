@@ -1,0 +1,176 @@
+@font-face{
+    font-family: Ninja Naruto;
+    src: url('../njnaruto.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: teal;
+}
+
+
+.usuario ul{
+    list-style: none;
+    position: relative;
+}
+.usuario ul li{
+    width: 120px;
+    float: right;
+}
+.usuario a{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+.usuario a:hover{
+    background-color: #086ea8;
+    color: white;
+}
+
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    font-family: 'Arial';
+}
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+.menu a{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #333;
+    color: #c5c5c5;
+}
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color: #086ea8;
+    color: white;
+}
+.menu ul ul li{
+    float: none;
+    border-bottom: solid 1px white;
+    position: relative;
+    z-index: 9999;
+}
+.menu a.logo{
+    font-size: 20px;
+    padding: 13px;
+    background-color: #222;
+    color: #086ea8;
+}
+.logo{
+    font-family: Ninja Naruto;
+    text-decoration: none;
+}
+
+
+label[for=bt_menu]{
+    padding: 5px;
+    background-color: #333;
+    color: #c5c5c5;
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px
+}
+#bt_menu{
+    display: none;
+}
+label[for=bt_menu]{
+    display: none;
+}
+@media(max-width: 800px){
+    label[for=bt_menu]{
+        display: block;
+    }
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+    .menu{
+        margin-top: 1px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu ul li{
+        position:relative;
+        z-index: 9999;
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+}
+
+
+#divbusca{
+    position: absolute;
+    float: left;
+}
+.p1{
+    padding: 4px;
+    margin: 10px;
+    width: 270px;
+    height: 20px;
+    margin-left: 500px;
+    border: 0px;
+}
+.p2{
+    padding: 5px;
+    color: white;
+    margin: 10px;
+    background: #333;
+    font-size: 14px;
+    -webkit-trasition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border: 0;
+}
+
+
+#rodape{
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    display: block;
+    background-color: #333;
+}
+.rodape1{
+    color: #c5c5c5;
+    position: relative;
+    list-style: none;
+    font-family: 'Arial';
+    font-size: 18px;
+    margin-left: 30px;
+}

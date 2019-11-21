@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <title>GeekZone!</title>
+        <link rel=stylesheet type=text/css href=../CSS/user.css>
+    </head>
+    <body>
+
+
+        <input type=checkbox id=bt_menu>
+        <label for=bt_menu>&#9776;</label>
+
+
+        <nav class=menu>
+            <ul>
+                <li><a class=logo href=../index.html>GeekZone!</a></li>
+                <li><a href=LOL.html>Novidades</a></li>
+                <li><a href=#>Jogos</a>
+                    <ul>
+                        <li><a href=HS.html>Hearthstone</a></li>
+
+                    </ul>
+                </li>
+                <li><a href=#>Animes</a>
+                    <ul>
+                        <li><a href=DS.html>Dr. Stone</a></li>
+                        <li><a href=KNY.html>Kimetsu No Yaiba</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class=login>
+            <div class=forma>
+                <form name=fo class=registro>
+                    <input id=valor type=text name=txtlogin placeholder=" Defina seu usuário" />
+                    <input type=password name=txtsenha placeholder=" Defina sua senha" />
+                    <input type=text name=txtlogin placeholder=" Defina seu E-mail" />
+                    <p>Por qual destes tópicos você acessou nosso site?</p>
+                    <input type=checkbox name=op1 value=1>Jogos
+                    <input type=checkbox name=op2 value=2>Animes
+                    <input class=botão type=button name=bt value=Cadastrar onclick=ok() />
+                    <p class=message>Já possui cadastro?<a href=login.html> Entrar.</a></p>
+                </form>
+            </div>
+        </div>
+
+
+        <div id=rodape>
+                <ul class=rodape1>
+                    <br><li>Entre em contato conosco:
+                        <li>geekzoneproject@gmail.com</li>
+                    </li>
+                </ul>
+        </body>
+        <script>
+            var nome ="";
+
+            function ok()
+            {
+                nome = document.getElementById('valor').value;
+                window.alert("Bem vindo "+ nome +", seu cadastro foi realizado com sucesso.");
+                window.location.href='../index.html';
+            }      
+        </script>
+    </html>
